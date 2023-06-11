@@ -3,26 +3,31 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-/* center header */
+
+/* Header */
 header {
   height: 60px;
   margin-top: 10px;
   text-align: center;
 }
+
 h1 {
-  /* Cool font for name */
   font-size: 2.2em;
 }
+
+/* Navigation Bar */
 nav {
   display: flex;
   flex-direction: column;
-  background-color: #d8a47f;
+  background-color: #5b0e2d;
 }
+
 nav a {
-  color: #13293d;
+  color: white;
   font-size: 1.2em;
   padding: 14px 20px;
   text-decoration: none;
@@ -32,18 +37,12 @@ nav a:hover {
   color: lightblue;
 }
 
-#headshot {
-  border-radius: 25% 25%;
-  max-width: 65%;
-}
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
-}
-#subtitle {
-  font-size: 1.5em;
+/* Section Structure */
+.content {
+  text-align: center;
+  background-color: #d8a47f;
+  color: black;
+  padding-bottom: 20px;
 }
 
 h3 {
@@ -52,27 +51,66 @@ h3 {
   text-decoration: underline;
 }
 
-.content {
-  text-align: center;
-  background-color: #5b0e2d;
-  color: white;
-  padding-bottom: 20px;
+/* Section: About Me */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#headshot {
+  border-radius: 25% 25%;
+  max-width: 65%;
+}
+
+#subtitle {
+  font-size: 1.5em;
 }
 
 #About-Me p {
   margin: 0 5%;
 }
 
+/* Section: Work Images */
 #Work-images {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-left: 20%;
   padding-left: 1%;
-  border-left: 2px solid white;
-  /* flex-direction: column; */
+  border-left: 2px solid black;
 }
 
+.top-portfolio-piece {
+  width: 95%;
+}
+
+.top-portfolio-piece:hover {
+  opacity: 0.5;
+}
+
+.portfolio-piece--img {
+  height: auto;
+  width: 75%;
+}
+
+.portfolio-piece {
+  width: 45%;
+  margin: 2.5%;
+}
+
+.portfolio-piece:hover {
+  opacity: 0.5;
+}
+
+footer {
+  height: 45px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Image Captions */
 figure {
   position: relative;
 }
@@ -88,68 +126,52 @@ figure {
   color: black;
 }
 
-.top-portfolio-piece {
-  width: 95%;
+/* Contact Me: links */
+a {
+  text-decoration: none;
+  color: black;
+}
+p a:hover {
+  color: lightblue;
 }
 
-.top-portfolio-piece:hover {
-  opacity: 0.5;
-}
-.portfolio-piece:hover {
-  opacity: 0.5;
-}
-
-.portfolio-piece {
-  width: 45%;
-  margin: 2.5%;
-}
-
-.portfolio-piece--img {
-  height: auto;
-  width: 75%;
-}
-
+/* Media Queries */
 @media (min-width: 800px) {
   nav {
     flex-direction: row;
     justify-content: flex-end;
   }
-}
 
-@media (min-width: 800px) {
-  #headshot {
-    max-width: 500px;
-  }
-}
-
-@media (min-width: 800px) {
   h3 {
     text-align: left;
     margin-left: 5%;
     text-decoration: none;
   }
-}
-@media (min-width: 800px) {
+
+  #headshot {
+    max-width: 500px;
+  }
+
   #About-Me p {
     margin-left: 20%;
     text-align: left;
     padding-left: 1%;
-    border-left: 2px solid white;
+    border-left: 2px solid black;
   }
 }
 
 @media (min-width: 800px) {
   #contact-links p:first-child {
-    border-left: 2px solid white;
-    padding-left: 1%;
-    text-align: left;
-    margin-left: 20%;
+    border-left: 2px solid black;
   }
   #contact-links p {
-    display: inline-flex;
+    display: inline;
+    text-align: initial;
     padding: 0 3%;
   }
 }
+
+/* Media Query: Images */
 @media (max-width: 1000px) {
   #Work-images {
     flex-direction: row;
@@ -162,11 +184,4 @@ figure {
     width: 80%;
     margin: 2.5%;
   }
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-p a:hover {
-  color: lightblue;
 }
