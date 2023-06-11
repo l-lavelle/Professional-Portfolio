@@ -1,54 +1,155 @@
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-   
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 /* center header */
-header{ 
-    height: 60px;
-    margin-top: 10px; 
-    text-align: center;
+header {
+  height: 60px;
+  margin-top: 10px;
+  text-align: center;
 }
-h1{
-    font-size: 2em;   
+h1 {
+  /* Cool font for name */
+  font-size: 2.2em;
 }
 nav {
-    display: flex;
-    flex-direction: column;
-    background-color: #d8a47f;
+  display: flex;
+  flex-direction: column;
+  background-color: #d8a47f;
+  /* border: 5px solid #5b0e2d; */
 }
 nav a {
-    color: #13293d;
-    font-size: 1.2em;
-    padding: 14px 20px; 
-    text-decoration: none;
-    text-align: center;
+  color: #13293d;
+  font-size: 1.2em;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
 }
-nav a:hover{
-    color: lightblue;
-}
-#background-image{
-    position: relative;
-    width:60%;
-    max-height: 200px;
-} 
-#headshot{
-    max-height: 200px;
-    width: 40%;
-}
-.images{
-    display: flex;
+nav a:hover {
+  color: lightblue;
 }
 
+#headshot {
+  border-radius: 25% 25%;
+  max-width: 65%;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+#subtitle {
+}
 
+h3 {
+  font-size: 1.5em;
+  padding: 5px 0;
+  text-decoration: underline;
+}
+
+.content {
+  text-align: center;
+  background-color: #5b0e2d;
+  color: white;
+  padding-bottom: 20px;
+}
+
+#About-Me p {
+  margin: 0 5%;
+}
+
+#Work-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+
+figure {
+  position: relative;
+  border: 1px solid red;
+}
+
+#image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 2.5%;
+  background-color: white;
+  border: 5px solid black;
+  color: black;
+}
+
+.top-portfolio-piece {
+  width: 95%;
+}
+
+.top-portfolio-piece:hover {
+  opacity: 0.5;
+}
+
+.portfolio-piece {
+  width: 45%;
+  margin: 2.5%;
+}
+
+.portfolio-piece--img {
+  height: auto;
+  width: 75%;
+}
+
+/* fixed linkedin link */
 
 @media (min-width: 800px) {
-    nav{ 
+  nav {
     flex-direction: row;
     justify-content: flex-end;
-    }
+  }
 }
+
+@media (min-width: 800px) {
+  #headshot {
+    max-width: 500px;
+  }
+}
+
+/* @media (min-width: 800px){
+    #laptop-view{
+        display:flex
+    }
+} */
+@media (max-width: 1000px) {
+  #Work-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: flex-end; */
+    border: 1px solid red;
+  }
+
+  .portfolio-piece {
+    width: 80%;
+    margin: 2.5%;
+  }
+}
+/* @media (min-width: 800px) {
+  #Work-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+} */
+@media (max-width: 800px) {
+  .top-portfolio-piece {
+  }
+}
+/* @media (min-width: 800px) {
+    #Contact-Me{ 
+    display: inline
+    }
+} */
